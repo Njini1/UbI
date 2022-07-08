@@ -1,4 +1,3 @@
-
 import Post from '../../models/post';
 import mongoose from 'mongoose';
 import Joi from 'joi'; //객체를 검증하기 위해 값을 if문 비교 대신라이브러리 사용
@@ -7,6 +6,7 @@ const { ObjectId } = mongoose.Types;
 
 export const getPostById = async (ctx, next) => {
   const { id } = ctx.params;
+  console.log(id);
   if (!ObjectId.isValid(id)) {
     ctx.status = 400;
     return;

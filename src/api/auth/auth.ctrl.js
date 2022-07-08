@@ -87,6 +87,7 @@ export const login = async ctx => {
 //로그인 상태 확인 GET /api/auth/check
 export const check = async (ctx) => {
   const { user } = ctx.state;
+  console.log(user);
   if (!user) {
     // 로그인중 아님
     ctx.status = 401; // Unauthorized
